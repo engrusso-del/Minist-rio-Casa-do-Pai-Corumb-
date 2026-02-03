@@ -20,4 +20,5 @@ export default function CardMenu({ icon, title, to }) {
           alignItems: "center",
           justifyContent: "center",
           gap: 8,
-          c
+};
+
