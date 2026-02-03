@@ -1,24 +1,20 @@
-import { Link } from "react-router-dom";
-
-export default function CardMenu({ icon, title, to }) {
+export default function CardMenu({ title, icon, onClick }) {
   return (
-    <Link
-      to={to}
-      style={{
-        textDecoration: "none",
-        color: "inherit",
-      }}
-    >
-      <div
-        style={{
-          border: "1px solid #ddd",
-          borderRadius: 8,
-          padding: 16,
-          minHeight: 100,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 8,
-};
+    <div style={styles.card} onClick={onClick}>
+      {icon && <span>{icon}</span>}
+      <span>{title}</span>
+    </div>
+  );
+}
 
+const styles = {
+  card: {
+    display: "flex",
+    alignItems: "center",
+    gap: 8,
+    padding: 12,
+    borderRadius: 8,
+    cursor: "pointer",
+    backgroundColor: "#f5f5f5",
+  },
+};
