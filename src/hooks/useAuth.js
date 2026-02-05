@@ -17,7 +17,6 @@ export function useAuth() {
   }, []);
 
   return { user, loading };
-  export function useAuth() {
-  return useAuthContext();
 }
+
 
