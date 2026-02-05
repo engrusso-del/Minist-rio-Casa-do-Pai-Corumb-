@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../services/firebase";
+import { useAuthContext } from "../contexts/AuthContext";
 
 export function useAuth() {
   const [user, setUser] = useState(null);
@@ -16,4 +17,7 @@ export function useAuth() {
   }, []);
 
   return { user, loading };
+  export function useAuth() {
+  return useAuthContext();
 }
+
