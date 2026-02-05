@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
-import { nmenuConfig } from "../config/menuConfig";
+import { menuConfig } from "../config/menuConfig";
 
 export default function Sidebar() {
   const { user } = useAuth();
@@ -12,7 +12,7 @@ export default function Sidebar() {
       <h3>Menu</h3>
 
       <nav style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-        {nmenuConfig
+        {menuConfig
           .filter((item) => item.roles.includes(user.role))
           .map((item) => (
             <NavLink
@@ -30,5 +30,6 @@ export default function Sidebar() {
     </aside>
   );
 }
+
 
 
